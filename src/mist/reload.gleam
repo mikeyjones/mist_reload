@@ -35,7 +35,7 @@ pub fn wrap(handler) {
 
   let _ =
     radiate.new()
-    |> radiate.add_dir("src")
+    |> radiate.add_dir(".")
     |> radiate.on_reload(fn(_state: Nil, _file) {
       actor.send(registry.data, Broadcast(Reloaded))
     })
